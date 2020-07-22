@@ -1,0 +1,16 @@
+.features__title {
+    @include font(25px, 30px);
+    font-weight: 700;
+}
+
+.features__list {
+    @include indents();
+    margin-bottom: 50px;
+    list-style: none;
+}
+
+.features__item {
+    padding-top: 85px ;
+    @include font(17px, 20px);
+    font-weight: 700;
+}

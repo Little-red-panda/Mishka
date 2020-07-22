@@ -17,6 +17,7 @@ const htmlmin = require ("gulp-htmlmin");
 const jsmin = require("gulp-jsmin");
 const babel = require("gulp-babel");
 const svgstore = require("gulp-svgstore");
+const gulpImport = require('gulp-html-import');
 
 gulp.task("sprite", function () {
   return gulp.src("source/img/icon/icon-*.svg")
@@ -73,6 +74,12 @@ gulp.task("compress", () => gulp.src("source/js/*.js")
 
 gulp.task("clean", () => del("build"));
 
+gulp.task("import", function () {
+  gulp.src('./source/index.html')
+      .pipe(gulpImport('./source/components/'))
+      .pipe(gulp.dest('build')); 
+});
+
 gulp.task("server", () => {
   server.init({
     server: "build/",
@@ -88,7 +95,7 @@ gulp.task("server", () => {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
-  gulp.watch("source/*.html", gulp.series("html", "refresh"));
+  gulp.watch("source/*.html", gulp.series("html", "refresh", "import"));
 });
 
 gulp.task("build", gulp.series(
@@ -97,6 +104,8 @@ gulp.task("build", gulp.series(
   "css",
   "sprite",
   "html",
-  "compress"));
+  "compress",
+  "import"
+));
 
 gulp.task("start", gulp.series("build", "server"));
