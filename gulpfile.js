@@ -74,8 +74,8 @@ gulp.task("compress", () => gulp.src("source/js/*.js")
 
 gulp.task("clean", () => del("build"));
 
-gulp.task("import", function () {
-  gulp.src('./source/index.html')
+gulp.task("import", async () => {
+  await gulp.src('./source/*.html')
       .pipe(gulpImport('./source/components/'))
       .pipe(gulp.dest('build')); 
 });
