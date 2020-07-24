@@ -1,10 +1,29 @@
+.contacts {
+    width: 260px;
+}
+
 .contacts__title {
-    @include font(25px, 30px);
-    font-weight: 700;
+    @include font(25px, 30px, 700);
 }
 
 .contacts__list {
     @include indents();
     @include font(15px, 30px);
     color: $grey;
+}
+
+.contacts__adress {
+    @include indents();
+    padding-right: 20px;
+    white-space: nowrap;
+    
+}
+
+.contacts__value {
+    @include indents();
+    
+}
+
+.contacts__mail {
+    display: block;
 }

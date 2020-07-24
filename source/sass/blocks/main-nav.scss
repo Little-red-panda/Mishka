@@ -1,0 +1,31 @@
+.main-nav__wrapper {
+    // display: none;
+}
+
+.main-nav__list {
+    list-style: none;
+    @include indents();
+    @include font(17px, 24px, 700);
+}
+
+.cite-list__item {
+    @include indents();
+    border-top: 1px solid #ececec;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 75px;
+}
+
+.cite-list__link {
+    @include indents();
+    text-decoration: none;
+    color: #000;
+}
+
+.user-list__item {
+    @extend .cite-list__item;
+}
+
+.sub-cite-list__wrapper {
+    display: none;
+}

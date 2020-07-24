@@ -1,13 +1,25 @@
+.top-item {
+    position: relative;
+    width: 260px;
+}
+
 .top-item__title {
     @include indents();
+    @include font(17px, 20px, 700);
     text-transform: uppercase;
-    @include font(17px, 20px);
     color: $light-green;
+    
+    position: absolute;
+    top: 63px;
+    
 }
 
 .top-item__subtitle {
     @include indents();
-    @include font(25px, 30px);
+    @include font(25px, 30px, 700);
+    padding-top: 30px;
+    padding-bottom: 50px;
+    
 }
 
 .top-item__info {
@@ -22,16 +34,14 @@
 
 .top-item__price {
     color: $grey;
-    @include font(17px, 24px);
-    font-weight: 700;
+    @include font(17px, 24px, 700);
 }
 
 .top-item__order {
 
     border: 2px solid $grey;
     color: $grey;
-    @include font(17px, 24px);
-    font-weight: 700;
+    @include font(17px, 24px, 700);
     text-decoration: none;
     
 }

@@ -5,29 +5,44 @@ $grey: #444444;
 
 $main-color: $white;
 
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
 @mixin indents {
     margin: 0;
     padding: 0;
 }
 
-@mixin font ($font-size, $line-height) {
+@mixin font ($font-size, $line-height, $font-weight: 400) {
     font-size: $font-size;
     line-height: $line-height;
+    font-weight: $font-weight;
 }
 
 body {
     min-width: 320px;
+    @include indents();
 
     font-family: 'Open Sans', 'Arial', sans-serif;
 
     background-color: $main-color;
 }
 
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 .button {
     border: 2px solid $grey;
     color: $grey;
-    @include font(17px, 24px);
-    font-weight: 700;
+    @include font(17px, 24px, 700);
     text-decoration: none;
 }
 

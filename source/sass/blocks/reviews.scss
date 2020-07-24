@@ -1,6 +1,13 @@
+.reviews {
+    width: 260px;
+}
+
 .reviews__title {
-    @include font(25px, 30px);
-    font-weight: 700;
+    @include font(25px, 30px, 700);
+}
+
+.reviews__item {
+    @include indents();
 }
 
 .reviews-text {
@@ -10,8 +17,7 @@
 }
 
 .reviews__author {
-    @include font(17px, 24px);
-    font-weight: 700;
+    @include font(17px, 24px, 700);
 }
 
 .reviews__adress {
