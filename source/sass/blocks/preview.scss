@@ -1,12 +1,8 @@
-.preview {
-    width: 320px;
-}
-
 .preview__slogan {
     display: block;
     padding: 72px 36px 120px 36px; 
 
-    background: $main-color url("../img/hero-mobile.jpg") no-repeat;
+    background: $main-color url("../img/hero-mobile.jpg") no-repeat 0 -35px;
     background-size: cover;
 
     @include font(27px, 30px, 700);
