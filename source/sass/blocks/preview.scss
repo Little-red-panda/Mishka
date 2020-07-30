@@ -1,9 +1,11 @@
 .preview__slogan {
     display: block;
-    padding: 72px 36px 120px 36px; 
+    box-sizing: border-box;
+    min-height: 283px;
+    padding: 72px 36px 0; 
 
-    background: $main-color url("../img/hero-mobile.jpg") no-repeat 0 -35px;
-    background-size: cover;
+    background: #f9f9f9 url("../img/hero-mobile.jpg") no-repeat center -15px;
+    border-top: 1px solid #ececec;
 
     @include font(27px, 30px, 700);
     text-align: center;
@@ -26,5 +28,63 @@
 
     &--toys {
         background-color: $dark-green;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .preview__slogan {
+        min-height: 745px;
+        padding-top: 155px;
+        background: #f9f9f9 url("../img/hero-desktop.jpg") no-repeat center;
+        background-size: contain;
+        @include font(43px, 50px, 700);
+    }
+
+    .preview__wrapper {
+        position: relative;
+        width: 676px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview__list {
+        position: absolute;
+        bottom: 0px;
+        display: flex;
+    }
+
+    .preview__item {
+        flex: 1 0 334px;
+        box-sizing: border-box;
+        width: 0.5em;
+        padding: 31px 130px 32px 35px;
+    }
+
+    .preview__decoration {
+        position: absolute;
+        margin-top: -20px;
+        display: block;
+        min-height: 20px;
+        min-width: 100%;
+        background: url("../img/zigzag-fill-desktoppng.png") repeat-x 0 0px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .preview__slogan {
+        padding-top: 160px;
+        @include font(53px, 57px, 700);
+    }
+
+    .preview__wrapper {
+        width: 1050px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .preview__item {
+        flex-basis: 525px;
+        padding-right: 330px;
+        padding-bottom: 42px;
     }
 }

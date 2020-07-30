@@ -1,5 +1,11 @@
-.main-nav__wrapper {
-    // display: none;
+.main-nav {
+    position: relative;
+}
+
+.main-nav__toggle {
+    position: absolute;
+    right: 0;
+    top: -50px;
 }
 
 .main-nav__list {
@@ -23,9 +29,99 @@
 }
 
 .user-list__item {
-    @extend .cite-list__item;
+    @include indents();
+    border-top: 1px solid #ececec;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 75px;
 }
 
-.sub-cite-list__wrapper {
+.sub-cite-list {
     display: none;
+}
+
+.main-nav__delivery-info {
+    display: none;
+}
+
+@media (min-width: $tablet-width) {
+    .main-nav__toggle {
+        display: none;
+    }
+
+    .cite-list {
+        position: absolute;
+        display: flex;
+        padding-left: 12px;
+    }
+
+    .cite-list__item {
+        padding-top: 20px;
+        padding-left: 38px;
+        @include font(15px, 24px, 700);
+
+    }
+
+    .user-list {
+        position: absolute;
+        top: -80px;
+        right: 50px;
+        display: flex;
+    }
+
+    .user-list__item {
+        padding-left: 85px;
+    }
+
+    .user-list__search {
+        font-size: 0;
+        border-left: 1px solid #ececec;
+        border-right: 1px solid #ececec;
+        background: url("../img/search.png") no-repeat center center;
+    }
+
+    .main-nav__delivery-info {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 50px;
+        @include font(15px, 24px);
+        color: $grey;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .cite-list {
+        top: -80px;
+        padding-left: 62px;
+    }
+
+    .cite-list__item {
+        padding-top: 27px;
+        @include font(17px, 24px, 700);
+    }
+
+    .cite-list__item:first-child {
+        padding-right: 35px;
+        border-right: 1px solid #ececec;
+    }
+
+    .user-list {
+        right: 100px;
+    }
+
+    .sub-cite-list {
+        display: flex;
+        position: absolute;
+        top: 20px;
+        left: 100px;
+    }
+
+    .sub-cite-item {
+        padding-right: 60px;
+    }
+
+    .main-nav__delivery-info {
+        right: 100px;
+    }
 }

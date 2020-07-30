@@ -1,11 +1,30 @@
-.page-header__wrapper {
-    display: flex;
-}
 
 .page-header__logo {
+    display: block;
+    box-sizing: border-box;
+    padding-top: 20px;
     height: 79px;
+}
+
+.page-header__logo-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .page-header__main-nav {
     // width: 320px;
+}
+
+@media (min-width: $tablet-width) {
+    .page-header__logo-image {
+        margin-left: 50px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .page-header__logo-image {
+        margin-left: auto;
+        margin-right: auto;
+    }
 }

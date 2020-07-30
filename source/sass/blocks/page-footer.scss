@@ -1,3 +1,14 @@
 .copyright__text {
     @include font(18px, 19px);
 }
+
+.page-footer__logo {
+    display: none;
+}
+
+.social__list {
+    @include indents();
+    display: flex;
+    list-style: none;
+    justify-content: center;
+}
