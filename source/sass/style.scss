@@ -2,6 +2,7 @@ $white: #fff;
 $light-green: #63d1bb;
 $dark-green: #56c3b2;
 $grey: #444444;
+$light-grey: #ececec;
 
 $main-color: $white;
 
@@ -29,9 +30,24 @@ body {
 }
 
 .container {
+    // width: 320px;
     padding-right: 30px;
     padding-left: 30px;
     margin: 0 auto;
+}
+
+@media (min-width: $tablet-width) {
+    .container {
+        width: 670px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .container {
+        width: 1050px;
+    }
 }
 
 img {

@@ -4,31 +4,58 @@
 
 .top-item__title {
     @include indents();
+    @include font(25px, 30px, 700);
+    padding-top: 30px;
+    padding-bottom: 50px;
+}
+
+.top-item__subtitle {
+    
+    @include indents();
     @include font(17px, 20px, 700);
     text-transform: uppercase;
     color: $light-green;
     
     position: absolute;
-    top: 63px;
-    
-}
-
-.top-item__subtitle {
-    @include indents();
-    @include font(25px, 30px, 700);
-    padding-top: 30px;
-    padding-bottom: 50px;
-    
+    top: 65px;   
 }
 
 .top-item__info {
-    color: $grey;
+    @include indents();
     @include font(15px, 24px);
+    color: $grey;
+    margin-bottom: 22px;
 }
 
 .top-item__descriptions {
     color: $grey;
     @include font(15px, 24px);
+}
+
+.table {
+    @include indents();
+    @include font(15px, 20px);
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 29px;
+
+}
+
+.table__tr {
+    @include indents();
+    border-bottom: 1px solid $light-grey;
+}
+
+.table__desc {
+    @include indents();
+    width: 100px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+}
+
+.table__value {
+    @include indents();
 }
 
 .top-item__price {
@@ -50,3 +77,4 @@
         
     }
 }
+
