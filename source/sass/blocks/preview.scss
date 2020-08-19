@@ -16,17 +16,19 @@
     list-style: none;   
 }
 
-.preview__item {
-    padding: 29px;
-
+.preview__link {
     @include font(19px, 24px, 700);
     color: #fff;
 
     &--interior {
+        display: block;
+        padding: 29px;
         background-color: $light-green;
     }
 
     &--toys {
+        display: block;
+        padding: 29px;
         background-color: $dark-green;
     }
 }
@@ -56,13 +58,16 @@
         flex: 1 0 334px;
         box-sizing: border-box;
         width: 0.5em;
+        
+    }
+
+    .preview__link {
         padding: 33px 36px 43px;
     }
 
     .preview__decoration {
         position: absolute;
         margin-top: -20px;
-        display: block;
         min-height: 20px;
         min-width: 100%;
         background: url("../img/zigzag-fill-desktoppng.png") repeat-x 0 0px;
@@ -83,6 +88,10 @@
 
     .preview__item {
         flex-basis: 525px;
+        
+    }
+
+    .preview__link {
         padding-right: 330px;
         padding-bottom: 42px;
     }

@@ -29,26 +29,7 @@ body {
     background-color: $main-color;
 }
 
-.container {
-    // width: 320px;
-    padding-right: 30px;
-    padding-left: 30px;
-    margin: 0 auto;
-}
 
-@media (min-width: $tablet-width) {
-    .container {
-        width: 670px;
-        padding-right: 0px;
-        padding-left: 0px;
-    }
-}
-
-@media (min-width: $desktop-width) {
-    .container {
-        width: 1050px;
-    }
-}
 
 img {
     max-width: 100%;
@@ -78,6 +59,51 @@ input[type="radio"].visually-hidden {
     clip-path: inset(100%);
     clip: rect(0 0 0 0);
     overflow: hidden;
+}
+
+.zigzag {
+    height: 6px;
+    width: 100%;
+    background: url("../img/zigzag-line-desktop.png") repeat-x;
+
+}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+    // position: relative;
+}
+
+@media (max-width: $tablet-width) {
+    .container {
+        max-width: 260px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .container {
+        width: 670px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .zigzag {
+        height: 16px;
+        background: url("../img/zigzag-line-desktop-2.png") repeat-x;
+    
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .container {
+        width: 1050px;
+    }
+
+    .zigzag {
+        height: 23px;
+        background: url("../img/zigzag-line-desktop-3.png") repeat-x;
+    }
 }
 
 @import "normalize.scss";
