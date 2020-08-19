@@ -1,0 +1,107 @@
+$white: #fff;
+$light-green: #63d1bb;
+$dark-green: #56c3b2;
+$grey: #444444;
+$light-grey: #ececec;
+
+$main-color: $white;
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+@mixin indents {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font ($font-size, $line-height, $font-weight: 400) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
+
+body {
+    min-width: 320px;
+    @include indents();
+
+    font-family: 'Open Sans', 'Arial', sans-serif;
+
+    background-color: $main-color;
+}
+
+
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    border: 2px solid $grey;
+    color: $grey;
+    @include font(17px, 24px, 700);
+    text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
+.zigzag {
+    height: 6px;
+    width: 100%;
+    background: url("../img/zigzag-line-desktop.png") repeat-x;
+
+}
+
+.container {
+    padding-right: 30px;
+    padding-left: 30px;
+    margin: 0 auto;
+    // position: relative;
+}
+
+@media (max-width: $tablet-width) {
+    .container {
+        max-width: 260px;
+    }
+}
+
+@media (min-width: $tablet-width) {
+    .container {
+        width: 670px;
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+
+    .zigzag {
+        height: 16px;
+        background: url("../img/zigzag-line-desktop-2.png") repeat-x;
+    
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .container {
+        width: 1050px;
+    }
+
+    .zigzag {
+        height: 23px;
+        background: url("../img/zigzag-line-desktop-3.png") repeat-x;
+    }
+}
