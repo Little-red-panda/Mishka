@@ -1,101 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta
-        name="viewport"
-        content="width=device-width,initial-scale=1">
-        <title>Mishka</title>
-        <link href="css/style.min.css" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
-    </head>
 
-    <body>
-        @import "header.html"
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Mishka</title>
+    <link href="css/style.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
+</head>
 
-        <main>
-            
-            <h1 class="visually-hidden">Мишка - магазин вязанных изделий.</h1>
-            <section class="preview">
-                <h2 class="visually-hidden">превью магазина</h2>
-                <b class="preview__slogan">Милые штучки ручной<br> работы для дома</b>
-                <div class="preview__wrapper">
-                    <ul class="preview__list">
-                        <li class="preview__item"><a class="preview__link preview__link--interior">Предметы<br> интерьера</a></li>
-                        <li class="preview__item"><a class="preview__link preview__link--toys">Детские<br> игрушки</a></li>
-                    </ul>
-                </div>
-                <div class="preview__decoration"></div>
-            </section>
+<body>
+    @import "header.html"
 
-            <div class="container">
-                <section class="top-item">
+    <main>
+
+        <h1 class="visually-hidden">Мишка - магазин вязанных изделий.</h1>
+        <section class="preview">
+            <h2 class="visually-hidden">превью магазина</h2>
+            <b class="preview__slogan">Милые штучки ручной<br> работы для дома</b>
+            <div class="preview__wrapper">
+                <ul class="preview__list">
+                    <li class="preview__item"><a class="preview__link preview__link--interior">Предметы<br>
+                            интерьера</a></li>
+                    <li class="preview__item"><a class="preview__link preview__link--toys">Детские<br> игрушки</a></li>
+                </ul>
+            </div>
+            <div class="preview__decoration"></div>
+        </section>
+
+        <div class="container">
+            <section class="top-item">
                 <h2 class="top-item__subtitle">Товар недели</h2>
                 <h3 class="top-item__title">Вязаные корзинки</h2>
-                <div class="top-item__wrapper">
-                <p class="top-item__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках, и трех размерах.</p>
-                <table class="top-item__descriptions table">
-                    <tr class="table__tr">
-                        <td class="table__desc">Цвет:</td>
-                        <td class="table__value">«Тиффани»/серый</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__desc">Диаметр:</td>
-                        <td class="table__value">25 см</td>
-                    </tr>
-                    <tr class="table__tr">
-                        <td class="table__desc">Высота:</td>
-                        <td class="table__value">15 см</td>
-                    </tr>
-                </table>
-                <picture class="top-item__image" alt="Вязаные корзинки">
-                    <source media="(min-width: 1200px)" srcset="img/triple-set-desktop.jpg">
-                    <source media="(min-width: 768px)" srcset="img/triple-set-tablet.jpg">   
-                    <img src="img/triple-set-mobile.jpg">
-                </picture> 
-                <p class="top-item__price">Цена: 990 руб.</p>
-                <a class="top-item__order button" href="#">Заказать</a>
-            </div>
-                <div class="top-item__zigzag zigzag"></div>
+                    <div class="top-item__wrapper">
+                        <p class="top-item__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках,
+                            и трех размерах.</p>
+                        <table class="top-item__descriptions table">
+                            <tr class="table__tr">
+                                <td class="table__desc">Цвет:</td>
+                                <td class="table__value">«Тиффани»/серый</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__desc">Диаметр:</td>
+                                <td class="table__value">25 см</td>
+                            </tr>
+                            <tr class="table__tr">
+                                <td class="table__desc">Высота:</td>
+                                <td class="table__value">15 см</td>
+                            </tr>
+                        </table>
+                        <picture class="top-item__image" alt="Вязаные корзинки">
+                            <source media="(min-width: 1200px)" srcset="img/content/triple-set-desktop@1x.jpg">
+                            <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg">
+                            <img src="img/content/triple-set-mobile@1x.jpg">
+                        </picture>
+                        <p class="top-item__price">Цена: 990 руб.</p>
+                        <a class="top-item__order button" href="#">Заказать</a>
+                    </div>
+                    
             </section>
+        </div>  
+        
+        <div class="features__zigzag zigzag"></div>
 
+        <div class="container">
             <section class="features">
                 <h2 class="features__title">Коротко о нас:</h2>
                 <ul class="features__list">
-                    <li class="features__item">Экологически чистые материалы</li>
-                    <li class="features__item">Скандинавский стиль по российской цене</li>
-                    <li class="features__item">Увеличивает лайки на фотографиях</li>
-                    <li class="features__item">Связано вручную с любовью и умилением</li>
-                    <li class="features__item">Поддержка отечественного производителя</li>
-                    <li class="features__item">Поставляется в подарочной упаковке</li>
+                    <li class="features__item features__item--flower">Экологически<br> чистые материалы</li>
+                    <li class="features__item features__item--money">Скандинавский стиль<br> по российской цене</li>
+                    <li class="features__item features__item--heart">Увеличивает лайки<br> на фотографиях</li>
+                    <li class="features__item features__item--ball">Связано вручную с<br> любовью и умилением</li>
+                    <li class="features__item features__item--rocket">Поддержка отечественного<br> производителя</li>
+                    <li class="features__item features__item--gift">Поставляется в<br> подарочной упаковке</li>
                 </ul>
             </section>
+        </div>    
 
+        <div class="container">
             <section class="reviews">
                 <div class="reviews__wrapper">
                     <h2 class="reviews__title">Отзывы</h2>
                     <div class="reviews__list">
                         <blockquote class="reviews__item">
                             <p class="reviews-text">
-                            Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и мои фотографии сразу стали более стильными, а также набирают больше лайков!
+                                Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков,
+                                как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке, и
+                                мои фотографии сразу стали более стильными, а также набирают больше лайков!
                             </p>
                             <p class="reviews__author">
-                            Анастасия Красильникова
+                                Анастасия Красильникова
                             </p>
                             <cite class="reviews__adress">
-                            @misssssiskras
+                                @misssssiskras
                             </cite>
                         </blockquote>
                         <blockquote>Другой отзыв</blockquote>
                     </div>
                     <p class="reviews__toggles"></p>
-                        <button class="reviews__slider reviews__slider--back" type="button">Назад</button>
-                        <button class="reviews__slider reviews__slider--next" type="button">Вперед</button>
+                    <button class="reviews__slider reviews__slider--back" type="button">Назад</button>
+                    <button class="reviews__slider reviews__slider--next" type="button">Вперед</button>
                     </p>
                     <a href="#" class="button reviews__button">Написать</a>
                 </div>
             </section>
+        </div>    
 
+        <div class="iner-container">
             <section class="contacts">
                 <h2 class="contacts__title">Контакты</h2>
                 <table class="contacts__list table">
@@ -120,35 +131,36 @@
                 <a class="contacts__mail button">Напишите нам</a>
             </section>
         </div>
-        </main>
+    </main>
 
-        <footer class="page-footer">
-            <img src="#" class="page-footer__logo" alt="Логотип магазина Мишка">
-            <div class="page-footer__social social">
-                <ul class="social__list">
-                    <li class="social__item">
-                        <a class="social__link social__link--instagram" href="#">Инст
-                            <img src="#" class="social__icon">
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--facebook" href="#">Фб
-                            <img src="#" class="social__icon">
-                        </a>
-                    </li>
-                    <li class="social__item">
-                        <a class="social__link social__link--twitter" href="#">Тв
-                            <img src="#" class="social__icon">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <div class="page-footer__copyright copyright">
-                <b class="copyright__text">Разработано</b>
-                <a href="#" class="copyright__link">
-                    <img src="#" class="copyright__logo" alt="Лого html-академии">
-                </a>
-            </div>
-        </footer>
-    </body>
+    <footer class="page-footer">
+        <img src="#" class="page-footer__logo" alt="Логотип магазина Мишка">
+        <div class="page-footer__social social">
+            <ul class="social__list">
+                <li class="social__item">
+                    <a class="social__link social__link--instagram" href="#">Инст
+                        <img src="#" class="social__icon">
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--facebook" href="#">Фб
+                        <img src="#" class="social__icon">
+                    </a>
+                </li>
+                <li class="social__item">
+                    <a class="social__link social__link--twitter" href="#">Тв
+                        <img src="#" class="social__icon">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="page-footer__copyright copyright">
+            <b class="copyright__text">Разработано</b>
+            <a href="#" class="copyright__link">
+                <img src="#" class="copyright__logo" alt="Лого html-академии">
+            </a>
+        </div>
+    </footer>
+</body>
+
 </html>
