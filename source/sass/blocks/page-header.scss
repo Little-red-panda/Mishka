@@ -29,6 +29,11 @@
         padding-left: 0px;
     }
 
+    .page-header__logo {
+        height: 90px;
+        padding-top: 22px;
+    }
+
     .page-header__logo-image {
         margin-left: 0px;
     }
@@ -39,8 +44,13 @@
         width: 1050px;
     }
 
+    .page-header__logo {
+        padding-top: 9px;
+    }
+
     .page-header__logo-image {
         margin-left: auto;
         margin-right: auto;
+        
     }
 }

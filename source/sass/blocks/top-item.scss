@@ -87,10 +87,6 @@
     text-transform: uppercase;
 }
 
-.top-item__zigzag {
-    margin-bottom: 30px;
-}
-
 @media (min-width: $tablet-width) {
     .top-item__title {
         @include font(43px, 50px, 700);
@@ -149,7 +145,7 @@
     }
 
     .top-item__wrapper {
-        margin-left: 176px;
+        margin-left: 175px;
     }
 
     .top-item__info {
