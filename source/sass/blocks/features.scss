@@ -1,4 +1,9 @@
+.features__zigzag {
+    margin-bottom: 30px;
+}
+
 .features__title {
+    @include indents();
     @include font(25px, 30px, 700);
 }
 
@@ -9,6 +14,102 @@
 }
 
 .features__item {
-    padding-top: 85px ;
+    padding-top: 85px;
     @include font(17px, 20px, 700);
+    position: relative;
+    &--flower::before {
+        content: "";
+        position: absolute;
+        width: 33px;
+        height: 38px;
+        top: 33px;
+        left: 7px;
+        background: url("../img/icon-feature-flower.svg") no-repeat 0 0;
+    }
+    &--money::before {
+        content: "";
+        position: absolute;
+        width: 47px;
+        height: 27px;
+        top: 33px;
+        left: 0px; 
+        background: url("../img/icon-feature-money.svg") no-repeat 0 0;
+    }
+    &--heart::before {
+        content: "";
+        position: absolute;
+        width: 34px;
+        height: 27px;
+        top: 37px;
+        left: 4px; 
+        background: url("../img/icon-feature-heart.svg") no-repeat 0 0;
+    }
+    &--ball::before {
+        content: "";
+        position: absolute;
+        width: 35px;
+        height: 34px;
+        top: 30px;
+        left: 2px; 
+        background: url("../img/icon-feature-ball.svg") no-repeat 0 0;
+    }
+    &--rocket::before {
+        content: "";
+        position: absolute;
+        width: 55px;
+        height: 33px;
+        top: 30px;
+        left: -8px; 
+        background: url("../img/icon-feature-rocket.svg") no-repeat 0 0;
+    }
+    &--gift::before {
+        content: "";
+        position: absolute;
+        width: 33px;
+        height: 32px;
+        top: 30px;
+        left: 2px; 
+        background: url("../img/icon-feature-gift.svg") no-repeat 0 0;
+    }
+}
+
+@media (min-width: $tablet-width) {
+
+    .features__zigzag {
+        margin-bottom: 53px;
+    }
+    .features__title {
+        @include font(43px, 50px, 700);
+    }
+
+    .features__list {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        // max-width: 670px;
+        max-height: 460px;
+        margin-bottom: 80px;
+    }
+
+    .features__item {
+        @include font(20px, 22px, 700);
+        padding-top: 96px;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 334px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .features {
+        padding-left: 175px;
+    }
+
+    .features__zigzag {
+        margin-bottom: 63px;
+    }
+
+    .features__title {
+        @include font(53px, 57px, 700);
+    }
 }
