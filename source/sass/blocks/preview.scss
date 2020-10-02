@@ -19,19 +19,65 @@
 .preview__link {
     @include font(19px, 24px, 700);
     color: #fff;
+    text-decoration: none;
 
     &--interior {
+        position: relative;
         display: block;
         padding: 29px;
         background-color: $light-green;
     }
 
+    &--interior::after {
+        content: "";
+        position: absolute;
+        top: 23px;
+        right: 36px;
+
+        width: 41px;
+        height: 62px;
+        background: url("../img/icon-interior.svg") no-repeat;
+        opacity: 0.6;
+    }
+
     &--toys {
+        position: relative;
         display: block;
         padding: 29px;
         background-color: $dark-green;
     }
+
+    &--toys::after{
+        content: "";
+        position: absolute;
+        top: 21px;
+        right: 27px;
+
+        width: 61px;
+        height: 61px;
+        background: url("../img/icon-toy.svg") no-repeat;
+        opacity: 0.6;
+    }
+
+    &:hover.preview__link--interior {
+        cursor: pointer;
+        background-color: #59d5bc;
+    }
+    &:hover.preview__link--toys {
+        cursor: pointer;
+        background-color: #46c1ae;
+    }
+    &:active.preview__link--interior {
+        background-color: #59d5bc;
+        color: rgba(255, 255, 255, 0.3);
+    }
+    &:active.preview__link--toys {
+        background-color: #46c1ae;
+        color: rgba(255, 255, 255, 0.3);
+    }
 }
+
+
 
 @media (min-width: $tablet-width) {
     .preview__slogan {
@@ -58,16 +104,28 @@
         flex: 1 0 334px;
         box-sizing: border-box;
         width: 0.5em;
-        
     }
 
     .preview__link {
         padding: 33px 36px 43px;
+        &:hover.preview__link--interior::after {
+            opacity: 1.0;
+        }
+        &:active.preview__link--interior::after {
+            opacity: 0.3;
+        }
+
+        &:hover.preview__link--toys::after {
+            opacity: 1.0;
+        }
+        &:active.preview__link--toys::after {
+            opacity: 0.3;
+        }
     }
 
     .preview__decoration {
         position: absolute;
-        margin-top: -20px;
+        margin-top: -19px;
         min-height: 20px;
         min-width: 100%;
         background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0px;

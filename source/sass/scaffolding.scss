@@ -29,8 +29,6 @@ body {
     background-color: $main-color;
 }
 
-
-
 img {
     max-width: 100%;
     height: auto;
@@ -41,6 +39,15 @@ img {
     color: $grey;
     @include font(17px, 24px, 700);
     text-decoration: none;
+    &:hover {
+        cursor: pointer;
+        background-color: $grey;
+        color: $white;
+    }
+    &:active {
+        background-color: $grey;
+        color: rgba(255, 255, 255, 0.3)
+    }
 }
 
 .visually-hidden:not(:focus):not(:active),
@@ -62,20 +69,29 @@ input[type="radio"].visually-hidden {
 }
 
 .zigzag {
+    margin: 0 auto;
     height: 6px;
+    width: 320px;
     background: url("../img/bg-zigzag-line.svg") repeat-x;
     background-size: 100% 6px;
 
 }
 
 .container {
+    position: relative;
     padding-right: 30px;
     padding-left: 30px;
     margin: 0 auto;
 }
 
-.iner-container {
+.inner-container {
     margin: 0 auto;
+}
+
+iframe {
+    min-width: 320px;
+    width: 100%;
+    border: none;
 }
 
 @media (max-width: $tablet-width) {
@@ -83,8 +99,8 @@ input[type="radio"].visually-hidden {
         max-width: 260px;
     }
 
-    .iner-container {
-        width: 320px;
+    .inner-container {
+        max-width: 320px;
     }
 }
 
@@ -95,12 +111,13 @@ input[type="radio"].visually-hidden {
         padding-left: 50px;
     }
 
-    .iner-container {
+    .inner-container {
         width: 768px;
     }
 
     .zigzag {
         height: 16px;
+        width: 768px;
         background-size: 100% 16px;
     
     }
@@ -109,16 +126,22 @@ input[type="radio"].visually-hidden {
 @media (min-width: $desktop-width) {
     .container {
         width: 1050px;
-        padding-right: 100px;
-        padding-left: 100px;
+        padding-right: 0px;
+        padding-left: 0px;
     }
 
-    .iner-container {
-        width: 1150px;
+    .inner-container {
+        width: 1050px;
     }
 
     .zigzag {
         height: 23px;
+        width: 1050px;
         background-size: 100% 23px;  
     }
+
+    iframe {
+        width: 525px;
+    }
 }
+

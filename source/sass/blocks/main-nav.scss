@@ -4,8 +4,46 @@
 
 .main-nav__toggle {
     position: absolute;
-    right: 0;
-    top: -50px;
+    right: 25px;
+    top: -66px;
+    padding: 25px;
+    
+    border: none;
+    background-color: transparent;
+    
+}
+
+.main-nav__toggle--closed.main-nav__toggle::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 2px;
+    background-color: #000;
+    box-shadow: 0 -6px, 0 -12px;
+    right: 15px;
+    top: 30px;
+}
+
+.main-nav__toggle--opened.main-nav__toggle {
+
+    &::before,
+    &::after {
+    content: "";
+    position: absolute;
+    right: 10px;
+    top: 23px;
+    width: 30px;
+    height: 2px;
+    background-color: #000;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+        box-shadow: none;
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
 }
 
 .main-nav__list {
@@ -16,35 +54,78 @@
 
 .cite-list__item {
     @include indents();
-    border-top: 1px solid $light-grey;
-    padding-top: 27px;
-    padding-bottom: 27px;
-    padding-left: 75px;
 }
 
 .cite-list__link {
     @include indents();
+    display: block;
     text-decoration: none;
     color: #000;
-}
-
-.user-list__item {
-    @include indents();
     border-top: 1px solid $light-grey;
     padding-top: 27px;
     padding-bottom: 27px;
     padding-left: 75px;
+
+    &:hover {
+        cursor: pointer;
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &:active {
+        color: rgba(0, 0, 0, 0.3);
+    }
 }
 
-.user-list__search svg {
-    display: none;
+.user-list__item {
+    @include indents();
+    
+    &:hover {
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &:hover.user-list__cart svg,
+    &:hover.user-list__search svg {
+        fill: $light-green;
+    }
+
+    &:active {
+        color: rgba(0, 0, 0, 0.3);
+    }
+    &:active.user-list__cart svg,
+    &:active.user-list__search svg {
+        opacity: 0.3;
+    }
+
+}
+
+.user-list__link {
+    @include indents();
+    display: block;
+    border-top: 1px solid $light-grey;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    padding-left: 75px;
+    text-decoration: none;
+    color: #000;
+}
+
+.user-list__search,
+.user-list__cart {
+    position: relative;
+}
+
+.user-list__search svg,
+.user-list__cart svg {
+    position: absolute;
+    top: 31px;
+    left: 32px;
+    fill: $light-grey;
 }
 
 .user-list__cart svg {
-    display: none;
+    top: 30px;
+    left: 30px;
 }
 
-.sub-cite-list {
+.sub-cite__list {
     display: none;
 }
 
@@ -63,11 +144,14 @@
     }
 
     .cite-list__item {
+        @include font(15px, 24px, 700);
+
+    }
+
+    .cite-list__link {
         padding-top: 20px;
         padding-left: 0px;
         padding-right: 38px;
-        @include font(15px, 24px, 700);
-
     }
 
     .user-list {   
@@ -80,24 +164,23 @@
     .user-list__item {
         box-sizing: border-box;
         height: 91px;
+    }
+
+    .user-list__link {
         padding-top: 34px;
         padding-left: 85px;
     }
 
     .user-list__search {
-        position: relative;
+
         font-size: 0;
         border-left: 1px solid $light-grey;
         border-right: 1px solid $light-grey;
-        // background: url("../img/icons/icon-search.svg") no-repeat center center;
     }
 
     .user-list__search svg {
-        display: block;
-        position: absolute;
         top: 37px;
         left: 33px;
-        fill: $light-grey;
     }
 
     .user-list__cart {
@@ -131,8 +214,7 @@
     .cite-list__item {
         box-sizing: border-box;
         height: 91px;
-        padding-top: 34px;
-        padding-right: 35px;
+        
         @include font(17px, 24px, 700);
     }
 
@@ -144,21 +226,41 @@
         padding-left: 35px;
     }
 
+    .cite-list__link {
+        padding-top: 34px;
+        padding-right: 35px;
+    }
+
     .user-list {
         right: 0px;
     }
 
-    .sub-cite-list {
+    .sub-cite__list {
         display: flex;
         position: absolute;
-        top: 20px;
-        left: 0px;
+        top: 0px;
+        left: -20px;
 
         @include font(15px, 24px, 700);
     }
 
-    .sub-cite-item {
-        padding-right: 60px;
+    .sub-cite__item {
+        padding-right: 20px;
+        
+    }
+
+    .sub-list__link {
+        @include indents();
+        display: block;
+        padding: 20px;
+        text-decoration: none;
+        color: #000;
+        &:hover {
+            color: rgba(0, 0, 0, 0.6);
+        }
+        &:active {
+            color: rgba(0, 0, 0, 0.3);
+        }
     }
 
     .main-nav__delivery-info {

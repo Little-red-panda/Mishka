@@ -9,7 +9,7 @@
 
 .features__list {
     @include indents();
-    margin-bottom: 50px;
+    margin-bottom: 60px;
     list-style: none;
 }
 
@@ -86,7 +86,6 @@
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        // max-width: 670px;
         max-height: 460px;
         margin-bottom: 80px;
     }
@@ -102,7 +101,7 @@
 
 @media (min-width: $desktop-width) {
     .features {
-        padding-left: 175px;
+        padding-left: 173px;
     }
 
     .features__zigzag {
@@ -111,5 +110,9 @@
 
     .features__title {
         @include font(53px, 57px, 700);
+    }
+
+    .features__list {
+        margin-bottom: 88px;
     }
 }
