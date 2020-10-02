@@ -96,6 +96,7 @@ gulp.task("server", () => {
 
   gulp.watch("source/sass/**/*.{scss,sass}", gulp.series("css"));
   gulp.watch("source/*.html", gulp.series("html", "refresh", "import"));
+  gulp.watch("source/components/*.html", gulp.series("html", "refresh", "import"));
 });
 
 gulp.task("build", gulp.series(
