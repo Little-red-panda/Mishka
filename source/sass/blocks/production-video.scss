@@ -67,6 +67,9 @@
     left: 79px;
     background-color: transparent;
     border: none;
+    &:focus {
+        outline: none;
+    }
 }
 
 .production-video__icon-play {
