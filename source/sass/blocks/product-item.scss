@@ -1,0 +1,135 @@
+.product-list {
+    @include indents();
+}
+
+.product-item {
+    @include indents();
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    list-style: none;
+}
+
+.product-item__wrapper {
+
+    padding-left: 27px;
+    padding-right: 27px;
+    border: 1px solid #ededed;
+    
+}
+
+.product-item__link {
+    @include font(17px, 24px, 700);
+
+    text-decoration: none;
+    color: #000;   
+}
+
+.product-item__title {
+    @include indents();
+    @include font(17px, 24px, 700);
+    padding-top: 27px;
+    padding-bottom: 5px;
+}
+
+.product-item__img {
+    display: block;
+}
+
+.product-item__info {
+    @include indents();
+    @include font(13px, 30px, 400);
+
+    color: #444;
+
+    margin-bottom: 20px;
+}
+
+.price-wrapper {
+    position: relative;
+    border-top: 1px solid #ededed;
+
+    padding-top: 24px;
+    margin-bottom: 25px;
+}
+
+.product-item__price {
+    @include font(15px, 24px, 700);
+}
+
+.product-item__basket svg {
+    position: absolute;
+    fill: #ccc;
+    right: -1px;
+    top: 22px;
+}
+
+@media (min-width: $tablet-width) {
+    .product-item {
+        display: flex;
+        margin-bottom: 54px;
+    }
+
+    .product-item__wrapper {
+        width: 50%;
+
+        display: flex;
+        flex-direction: column;
+
+        max-height: 334px;
+    }
+
+    .product-item__title {
+        @include font(20px, 24px, 700);
+        padding-bottom: 7px;
+    }
+
+    .product-item__info {
+        @include font(15px, 30px, 400);
+        flex-grow: 1;
+    }
+
+    .price-wrapper {
+        margin-left: 6px;
+        margin-right: 6px;
+    }
+
+    .product-item__price {
+        @include font(17px, 24px, 700);
+    }
+}
+
+
+@media (min-width: $desktop-width) {
+    .product-list {
+        display: flex;
+        
+    }
+
+    .product-item {
+        flex-direction: column;
+        width: 316px;
+        margin-right: 51px;
+        margin-top: 0;
+        min-height: 659px;
+    }
+
+    .product-item:last-child {
+        margin-right: 0;
+    }
+
+    .product-item__wrapper {
+        width: auto;
+
+        flex-grow: 1;
+    }
+
+    .product-item__info {
+        margin-bottom: 5px;
+    }
+
+    .price-wrapper {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}

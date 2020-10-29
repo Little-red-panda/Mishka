@@ -9,6 +9,9 @@ $main-color: $white;
 $tablet-width: 768px;
 $desktop-width: 1200px;
 
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
 @mixin indents {
     margin: 0;
     padding: 0;
@@ -35,10 +38,20 @@ img {
 }
 
 .button {
+    @include indents();
+    @include font(17px, 24px, 700);
+    
+    display: block;
+    box-sizing: border-box;
     border: 2px solid $grey;
     color: $grey;
-    @include font(17px, 24px, 700);
+    
+    text-align: center;
+    vertical-align: middle;
     text-decoration: none;
+    text-transform: uppercase;
+    line-height: 48px;
+    height: 52px;
     &:hover {
         cursor: pointer;
         background-color: $grey;
@@ -94,6 +107,22 @@ iframe {
     border: none;
 }
 
+
+
+.inner-page__title {
+    @include indents();
+    @include font(27px, 30px, 700); 
+
+    padding-top: 70px;
+    padding-bottom: 76px;
+
+    background-color: #f1f1f1;
+
+    text-align: center;
+
+    margin-bottom: 30px;
+}
+
 @media (max-width: $tablet-width) {
     .container {
         max-width: 260px;
@@ -115,6 +144,32 @@ iframe {
         width: 768px;
     }
 
+    .inner-page__title {
+        @include font(43px, 50px, 700);
+
+        padding-top: 90px;
+        padding-bottom: 93px;
+    }
+
+    .decoration-wrapper {
+        position: relative;
+    }
+
+    .decoration {
+        position: absolute;
+        margin-top: -14px;
+        min-height: 24px;
+        min-width: 100%;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0px;
+        background-size: auto 24px;
+    }
+
+    .decoration--iner-page {
+        top: -26px;
+    }
+
+    
+
     .zigzag {
         height: 16px;
         width: 768px;
@@ -132,6 +187,26 @@ iframe {
 
     .inner-container {
         width: 1050px;
+    }
+
+    .inner-page__title {
+        @include font(53px, 57px, 700);
+
+        padding-top: 94px;
+        padding-bottom: 103px;
+    }
+
+    .decoration {
+        position: absolute;
+        margin-top: -14px;
+        min-height: 24px;
+        min-width: 100%;
+        background: url("../img/bg-zigzag-fill.svg") repeat-x 0 0px;
+        background-size: auto 34px;
+    }
+
+    .decoration--iner-page {
+        top: -36px;
     }
 
     .zigzag {
