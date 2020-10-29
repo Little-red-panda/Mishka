@@ -93,23 +93,19 @@
 }
 
 .reviews__button {
-    @include indents();
-    display: block;
-    box-sizing: border-box;
     width: 260px;
-    height: 52px;
 
     margin-bottom: 45px;
-
-    text-align: center;
-    vertical-align: middle;
-    line-height: 48px;
 }
 
 @media(min-width: $tablet-width) {
 
     .reviews {
-        background: url("../img/review@1x.jpg") no-repeat 0px 0;
+        background: url("../img/review@1x.jpg") no-repeat 0 0;
+        @media(min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+            background-image: url("../img/review@2x.jpg");
+            background-size: 350px auto;
+        }
         padding: 0 50px;
         margin-bottom: 66px;
     }
