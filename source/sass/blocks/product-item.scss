@@ -8,6 +8,14 @@
     margin-bottom: 30px;
 
     list-style: none;
+
+    &:hover {
+        box-shadow: 0 6px 10px #ececec;
+    }
+
+    &:active {
+        box-shadow: 0 3px 5px #ececec;
+    }
 }
 
 .product-item__wrapper {
@@ -30,6 +38,14 @@
     @include font(17px, 24px, 700);
     padding-top: 27px;
     padding-bottom: 5px;
+
+    &:hover {
+        opacity: 0.6;
+    }
+
+    &:active {
+        opacity: 0.3;
+    }
 }
 
 .product-item__img {
@@ -62,6 +78,16 @@
     fill: #ccc;
     right: -1px;
     top: 22px;
+}
+
+.product-item__basket:hover svg,
+.product-item__basket:focus svg {
+    fill: $light-green;
+}
+
+.product-item__basket:active svg {
+    opacity: 0.3;
+    fill: $light-green;
 }
 
 @media (min-width: $tablet-width) {

@@ -2,6 +2,14 @@
     padding: 0 33px;
     border: 1px solid #ededed;
     margin-bottom: 58px;
+
+    &:hover {
+        box-shadow: 0 6px 10px #ececec;
+    }
+
+    &:active {
+        box-shadow: 0 3px 5px #ececec;
+    }
 }
 
 .production-video__title {
@@ -62,7 +70,15 @@
 }
 
 .production-video__icon-play {
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.2);
+    }
 
+    &:active {
+        transform: scale(0.8);
+        opacity: 0.3;
+    }
 }
 
 @media (min-width: $tablet-width) {

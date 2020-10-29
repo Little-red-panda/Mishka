@@ -72,14 +72,8 @@
     margin-left: -130px;
 
     display: block;
-    box-sizing: border-box;
-    width: 260px;
-    height: 52px;
-    
+    width: 260px; 
     line-height: 48px;
-    vertical-align: middle;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 @media(min-width: $tablet-width) {
@@ -133,7 +127,6 @@
     
     .contacts__mail {
         width: 230px;
-        height: 52px;
 
         bottom: -640px;
         margin-left: -115px;
