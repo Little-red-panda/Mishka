@@ -39,18 +39,18 @@ img {
 
 .button {
     @include indents();
-    @include font(17px, 24px, 700);
+    @include font(17px, 48px, 700);
     
     display: block;
     box-sizing: border-box;
     border: 2px solid $grey;
     color: $grey;
+    background-color: transparent;
     
     text-align: center;
     vertical-align: middle;
     text-decoration: none;
     text-transform: uppercase;
-    line-height: 48px;
     height: 52px;
     &:hover {
         cursor: pointer;
