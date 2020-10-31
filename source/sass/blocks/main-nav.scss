@@ -46,17 +46,19 @@
     }
 }
 
-.main-nav__list {
+.main-nav__cite-list,
+.main-nav__user-list,
+.main-nav__sub-cite-list {
     list-style: none;
     @include indents();
     @include font(17px, 24px, 700);
 }
 
-.cite-list__item {
+.main-nav__cite-item {
     @include indents();
 }
 
-.cite-list__link {
+.main-nav__cite-link {
     @include indents();
     display: block;
     text-decoration: none;
@@ -75,28 +77,11 @@
     }
 }
 
-.user-list__item {
+.main-nav__user-item {
     @include indents();
-    
-    &:hover {
-        color: rgba(0, 0, 0, 0.6);
-    }
-    &:hover.user-list__cart svg,
-    &:hover.user-list__search svg {
-        fill: $light-green;
-    }
-
-    &:active {
-        color: rgba(0, 0, 0, 0.3);
-    }
-    &:active.user-list__cart svg,
-    &:active.user-list__search svg {
-        opacity: 0.3;
-    }
-
 }
 
-.user-list__link {
+.main-nav__user-link {
     @include indents();
     display: block;
     border-top: 1px solid $light-grey;
@@ -105,27 +90,43 @@
     padding-left: 75px;
     text-decoration: none;
     color: #000;
+
+    &:hover {
+        color: rgba(0, 0, 0, 0.6);
+    }
+    &:hover svg,
+    &:hover svg {
+        fill: $light-green;
+    }
+
+    &:active {
+        color: rgba(0, 0, 0, 0.3);
+    }
+    &:active svg,
+    &:active svg {
+        opacity: 0.3;
+    }
 }
 
-.user-list__search,
-.user-list__cart {
+.main-nav__user-search,
+.main-nav__user-cart {
     position: relative;
 }
 
-.user-list__search svg,
-.user-list__cart svg {
+.main-nav__user-search svg,
+.main-nav__user-cart svg {
     position: absolute;
     top: 31px;
     left: 32px;
     fill: $light-grey;
 }
 
-.user-list__cart svg {
+.main-nav__user-cart svg {
     top: 30px;
     left: 30px;
 }
 
-.sub-cite__list {
+.main-nav__sub-cite-list {
     display: none;
 }
 
@@ -138,56 +139,56 @@
         display: none;
     }
 
-    .cite-list {
+    .main-nav__cite-list {
         position: absolute;
         display: flex;
     }
 
-    .cite-list__item {
+    .main-nav__cite-item {
         @include font(15px, 24px, 700);
 
     }
 
-    .cite-list__link {
+    .main-nav__cite-link {
         padding-top: 20px;
         padding-left: 0px;
         padding-right: 38px;
     }
 
-    .user-list {   
+    .main-nav__user-list {   
         position: absolute;
         top: -91px;
         right: 0px;
         display: flex;
     }
 
-    .user-list__item {
+    .main-nav__user-item {
         box-sizing: border-box;
         height: 91px;
     }
 
-    .user-list__link {
+    .main-nav__user-link {
         padding-top: 34px;
         padding-left: 85px;
     }
 
-    .user-list__search {
+    .main-nav__user-search {
 
         font-size: 0;
         border-left: 1px solid $light-grey;
         border-right: 1px solid $light-grey;
     }
 
-    .user-list__search svg {
+    .main-nav__user-search svg {
         top: 37px;
         left: 33px;
     }
 
-    .user-list__cart {
+    .main-nav__user-cart {
         position: relative;
     }
 
-    .user-list__cart svg {
+    .main-nav__user-cart svg {
         display: block;
         position: absolute;
         top: 36px;
@@ -206,36 +207,36 @@
 }
 
 @media (min-width: $desktop-width) {
-    .cite-list {
+    .main-nav__cite-list {
         top: -91px;
         padding-left: 0px;
     }
 
-    .cite-list__item {
+    .main-nav__cite-item {
         box-sizing: border-box;
         height: 91px;
         
         @include font(17px, 24px, 700);
     }
 
-    .cite-list__item:first-child {
+    .main-nav__cite-item:first-child {
         border-right: 1px solid #ececec;
     }
 
-    .cite-list__item:last-child {
+    .main-nav__cite-item:last-child {
         padding-left: 35px;
     }
 
-    .cite-list__link {
+    .main-nav__cite-link {
         padding-top: 34px;
         padding-right: 35px;
     }
 
-    .user-list {
+    .main-nav__user-list {
         right: 0px;
     }
 
-    .sub-cite__list {
+    .main-nav__sub-cite-list {
         display: flex;
         position: absolute;
         top: 0px;
@@ -244,11 +245,11 @@
         @include font(15px, 24px, 700);
     }
 
-    .sub-cite__item {
+    .main-nav__sub-cite-item {
         padding-right: 20px;   
     }
 
-    .sub-list__link {
+    .main-nav__sub-cite-link {
         @include indents();
         display: block;
         padding: 20px;

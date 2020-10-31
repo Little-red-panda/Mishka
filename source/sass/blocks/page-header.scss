@@ -2,8 +2,11 @@
 .page-header__logo {
     display: block;
     box-sizing: border-box;
-    padding-top: 20px;
+    width: 160px;
     height: 79px;
+    
+    padding-top: 20px;
+    margin: 0 auto;  
 }
 
 .page-header__logo-image {
@@ -34,6 +37,7 @@
     .page-header__logo {
         height: 90px;
         padding-top: 22px;
+        margin: 0;
     }
 
     .page-header__logo-image {
@@ -49,6 +53,7 @@
     .page-header__logo {
         display: block;
         padding-top: 9px;
+        margin: 0 auto; 
     }
 
     .page-header__logo-image {

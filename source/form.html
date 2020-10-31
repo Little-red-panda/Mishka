@@ -30,9 +30,9 @@
                 </p>
                 <form class="form__order" method="GET" action="https://echo.htmlacademy.ru">
                     <fieldset class="form__type">
-                        <div>
+                        
                             <legend>Тип</legend>
-                        </div>
+                        
                         <ul class="form__list">
                             <li>
                                 <input class="visually-hidden" type="radio" name="type" value="аксессуар-для-интерьера"
@@ -51,9 +51,9 @@
             <div class="form__container">
                 <div class="container">
                     <fieldset class="form__color">
-                        <div>
+                        
                             <legend>Цвет</legend>
-                        </div>
+                        
                         <ul class="form__list">
                             <li>
                                 <input class="visually-hidden" type="checkbox" name="white" id="white" checked>
@@ -86,9 +86,9 @@
 
             <div class="container">
                 <fieldset class="form__name">
-                    <div>
+                    
                         <legend>ФИО</legend>
-                    </div>
+                    
                     <ul class="form__list">
                         <li>
                             <input type="text" name="name" id="name" placeholder="Введите ваше имя*" required>
@@ -111,9 +111,9 @@
             <div class="form__container">
                 <div class="container">
                     <fieldset class="form__phone">
-                        <div>
+                        
                             <legend>Тел</legend>
-                        </div>
+                        
                         <div class="form__input-wrapper">
                             <input type="tel" pattern="\+7\-[0-9]{3}\-[0-9]{3}\-[0-9]{2}\-[0-9]{2}"
                                 placeholder="+7 ХХХ ХХ ХХ*" required>
@@ -139,10 +139,11 @@
 
             <div class="container">
                 <fieldset class="form__area">
-                    <div>
+                    
                         <legend>Доп</legend>
-                    </div>
+                        <div class="form__input-wrapper">
                     <textarea rows="6" cols="60" placeholder="Опишите все ваши пожелания к заказу"></textarea>
+                </div>
                 </fieldset>
                 <small class="form__required">*Поля обязательны для заполнения</small>
                 <button class="form__button button" type="submit">Отправить заказ</button>
