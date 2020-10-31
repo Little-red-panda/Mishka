@@ -1,0 +1,24 @@
+$white: #fff;
+$light-green: #63d1bb;
+$dark-green: #56c3b2;
+$grey: #444444;
+$light-grey: #ececec;
+
+$main-color: $white;
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
+
+@mixin indents {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font ($font-size, $line-height, $font-weight: 400) {
+    font-size: $font-size;
+    line-height: $line-height;
+    font-weight: $font-weight;
+}
