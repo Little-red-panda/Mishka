@@ -71,20 +71,9 @@
 }
 
 .top-item__order {
-    display: block;
-    box-sizing: border-box;
     width: 259px;
-    height: 52px;
-    border: 2px solid $grey;
 
-    padding-top: 13px;
     margin-bottom: 36px;
-    
-    @include font(17px, 20px, 700);
-    color: $grey;
-    text-decoration: none;
-    text-align: center;
-    text-transform: uppercase;
 }
 
 @media (min-width: $tablet-width) {

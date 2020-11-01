@@ -229,7 +229,7 @@
 .form__phone input[type="tel"]:hover + .form__phone-icon,
 .form__email input[type="email"]:hover + .form__email-icon,
 .form__phone input[type="tel"]:focus + .form__phone-icon, 
-.form__email input[type="email"]:focus + .form__email-icon,{
+.form__email input[type="email"]:focus + .form__email-icon {
     fill: $light-green;
 }
 

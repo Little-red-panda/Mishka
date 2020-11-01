@@ -51,12 +51,9 @@
                                 <b class="product-item__price">
                                     1 200 руб.
                                 </b>
-
-                                <a class="product-item__basket" href="#"><span class="visually-hidden">Корзина</span>
-                                    <svg width="20.294px" height="18.849px">
+                                    <svg  class="product-item__cart" width="20.294px" height="18.849px"  aria-label="Корзина">
                                         <use xlink:href="#cart"></use>                        
                                     </svg>
-                                </a>
                             </div>
                         </div>
                     </li>
@@ -86,12 +83,9 @@
                                 <b class="product-item__price">
                                     690 руб.
                                 </b>
-
-                                <a class="product-item__basket" href="#"><span class="visually-hidden">Корзина</span>
-                                    <svg width="20.294px" height="18.849px">
+                                    <svg class="product-item__cart" width="20.294px" height="18.849px" aria-label="Корзина">
                                         <use xlink:href="#cart"></use>                        
                                     </svg> 
-                                </a>
                             </div>
                         </div>
                     </li>
@@ -121,12 +115,11 @@
                                 <b class="product-item__price">
                                     1 500 руб.
                                 </b>
-
-                                <a class="product-item__basket" href="#"><span class="visually-hidden">Корзина</span>
-                                    <svg width="20.294px" height="18.849px">
+                                <!-- <button class="product-item__button"> -->
+                                    <svg class="product-item__cart" width="20.294px" height="18.849px" aria-label="Корзина">
                                         <use xlink:href="#cart"></use>                        
-                                    </svg> 
-                                </a>
+                                    </svg>
+                                <!-- </button> -->
                             </div>
                         </div>
                     </li>
@@ -159,9 +152,35 @@
                 </div>
             </section>
         </div>
+    </main>
 
         @import "footer.html"
-    </main>
+
+        <section class="modal modal-cart">
+            <div class="modal-cart__container">
+            <h2 class="modal-cart__title">Добавить в корзину</h2>
+            <p class="modal-cart__text">Выберите размер:</p>
+            <form method="GET" action="https://echo.htmlacademy.ru">
+            <ul class="modal-cart__list">
+                <li class="modal-cart__item">
+                    <input type="radio" name="size" value="S" id="s" class="visually-hidden" checked>
+                    <label for="s" class="modal-cart__size">S</label>
+                </li>
+                <li class="modal-cart__item">
+                    <input type="radio" name="size" value="M" id="m" class="visually-hidden">
+                    <label for="m" class="modal-cart__size">M</label>
+                </li><li class="modal-cart__item">
+                    <input type="radio" name="size" value="L" id="l" class="visually-hidden">
+                    <label for="l" class="modal-cart__size">L</label>
+                </li>
+            </ul>
+            <button type="submit" class="modal-cart__button button">Добавить</button>
+            </form>
+            </div>
+        </section>
+        <div class="modal-overlay"></div>
+
+        <script src="js/script.min.js"></script>
 </body>
 
 </html>

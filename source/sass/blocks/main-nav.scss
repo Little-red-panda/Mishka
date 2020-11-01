@@ -2,6 +2,10 @@
     position: relative;
 }
 
+.main-nav--closed {
+    display: none;
+}
+
 .main-nav__toggle {
     position: absolute;
     right: 25px;
@@ -11,6 +15,10 @@
     border: none;
     background-color: transparent;
     
+}
+
+.main-nav__toggle--nojs {
+    display: none;
 }
 
 .main-nav__toggle--closed.main-nav__toggle::before {
@@ -30,9 +38,9 @@
     &::after {
     content: "";
     position: absolute;
-    right: 10px;
-    top: 23px;
-    width: 30px;
+    right: 12px;
+    top: 24px;
+    width: 27px;
     height: 2px;
     background-color: #000;
     }

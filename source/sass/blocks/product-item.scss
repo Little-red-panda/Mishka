@@ -73,19 +73,27 @@
     @include font(15px, 24px, 700);
 }
 
-.product-item__basket svg {
+// .product-item__button {
+//     position: absolute;
+//     right: -1px;
+//     top: 22px;
+//     border: none;
+//     background-color: transparent;
+// }
+
+.product-item__cart {
     position: absolute;
     fill: #ccc;
     right: -1px;
     top: 22px;
 }
 
-.product-item__basket:hover svg,
-.product-item__basket:focus svg {
+.product-item__cart:hover,
+.product-item__cart:focus {
     fill: $light-green;
 }
 
-.product-item__basket:active svg {
+.product-item__cart:active {
     opacity: 0.3;
     fill: $light-green;
 }
