@@ -2,4 +2,4 @@
 В этом проекте использовала адаптивную верстку по принципу Mobile first. Использовала препроцессор SASS, для сборки - Gulp.
 Придерживалась методологии БЭМ, кроссбраузерности и доступности.
 
-# Собранный сайт на https://github.com/Little-red-panda/Mishka_show
+Собранный сайт на https://github.com/Little-red-panda/Mishka_show
