@@ -5,14 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Mishka</title>
-    <link href="css/style.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 
 <body>
-    @import "sprite.html"
-    @import "header.html"
-
+    @@include('components/sprite.html')
+    @@include('components/header.html')
 
     <main>
 
@@ -24,7 +23,8 @@
                 <ul class="preview__list">
                     <li class="preview__item"><a class="preview__link preview__link--interior" href="#">Предметы<br>
                             интерьера</a></li>
-                    <li class="preview__item"><a class="preview__link preview__link--toys" href="#">Детские<br> игрушки</a></li>
+                    <li class="preview__item"><a class="preview__link preview__link--toys" href="#">Детские<br>
+                            игрушки</a></li>
                 </ul>
             </div>
             <div class="decoration"></div>
@@ -33,32 +33,34 @@
         <div class="container">
             <section class="top-item">
                 <h2 class="top-item__subtitle">Товар недели</h2>
-                <h3 class="top-item__title">Вязаные корзинки</h2>
-                    <div class="top-item__wrapper">
-                        <p class="top-item__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках,
-                            и трех размерах.</p>
-                        <table class="top-item__descriptions top-item__table">
-                            <tr class="top-item__table-tr">
-                                <td class="top-item__table-desc">Цвет:</td>
-                                <td class="top-item__table-value">«Тиффани»/серый</td>
-                            </tr>
-                            <tr class="top-item__table-tr">
-                                <td class="top-item__table-desc">Диаметр:</td>
-                                <td class="top-item__table-value">25 см</td>
-                            </tr>
-                            <tr class="top-item__table-tr">
-                                <td class="top-item__table-desc">Высота:</td>
-                                <td class="top-item__table-value">15 см</td>
-                            </tr>
-                        </table>
-                        <picture class="top-item__image" alt="Вязаные корзинки">
-                            <source media="(min-width: 1200px)" srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
-                            <source media="(min-width: 768px)" srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
-                            <img srcset="img/content/triple-set-mobile@1x.jpg 1x, img/content/triple-set-mobile@2x.jpg 2x">
-                        </picture>
-                        <p class="top-item__price">Цена: 990 руб.</p>
-                        <button class="top-item__order button  modal__btn" href="#">Заказать</button>
-                    </div>
+                <h3 class="top-item__title">Вязаные корзинки</h3>
+                <div class="top-item__wrapper">
+                    <p class="top-item__info">Экологически чистая пряжа, ручная работа. Доступны в шести расцветках,
+                        и трех размерах.</p>
+                    <table class="top-item__descriptions top-item__table">
+                        <tr class="top-item__table-tr">
+                            <td class="top-item__table-desc">Цвет:</td>
+                            <td class="top-item__table-value">«Тиффани»/серый</td>
+                        </tr>
+                        <tr class="top-item__table-tr">
+                            <td class="top-item__table-desc">Диаметр:</td>
+                            <td class="top-item__table-value">25 см</td>
+                        </tr>
+                        <tr class="top-item__table-tr">
+                            <td class="top-item__table-desc">Высота:</td>
+                            <td class="top-item__table-value">15 см</td>
+                        </tr>
+                    </table>
+                    <picture class="top-item__image" alt="Вязаные корзинки">
+                        <source media="(min-width: 1200px)"
+                            srcset="img/content/triple-set-desktop@1x.jpg 1x, img/content/triple-set-desktop@2x.jpg 2x">
+                        <source media="(min-width: 768px)"
+                            srcset="img/content/triple-set-tablet@1x.jpg 1x, img/content/triple-set-tablet@2x.jpg 2x">
+                        <img srcset="img/content/triple-set-mobile@1x.jpg 1x, img/content/triple-set-mobile@2x.jpg 2x">
+                    </picture>
+                    <p class="top-item__price">Цена: 990 руб.</p>
+                    <button class="top-item__order button  modal__btn" href="#">Заказать</button>
+                </div>
 
             </section>
         </div>
@@ -101,10 +103,9 @@
                         </blockquote>
                         <blockquote class="reviews__inner-item">Другой отзыв</blockquote>
                     </div>
-                    <p class="reviews__toggles"></p>
                     <button class="reviews__toggle reviews__toggle--back" type="button">Назад</button>
                     <button class="reviews__toggle reviews__toggle--next" type="button">Вперед</button>
-                    </p>
+
                     <a href="#" class="button reviews__button">Написать</a>
                 </div>
             </section>
@@ -138,45 +139,46 @@
                     </tr>
                 </table>
 
-                
+
                 <a class="contacts__mail button" href="#">Напишите нам</a>
             </div>
             <div class="contacts__map map">
                 <iframe src="https://yandex.ru/map-widget/v1/-/CCQtNOajHB" width="320" height="457" frameborder="1"
                     allowfullscreen=""></iframe>
-                    
+
             </div>
         </section>
 
     </main>
 
-    @import "footer.html"
+    @@include('components/footer.html')
 
     <section class="modal modal-cart">
         <div class="modal-cart__container">
-        <h2 class="modal-cart__title">Добавить в корзину</h2>
-        <p class="modal-cart__text">Выберите размер:</p>
-        <form method="GET" action="https://echo.htmlacademy.ru">
-        <ul class="modal-cart__list">
-            <li class="modal-cart__item">
-                <input type="radio" name="size" value="S" id="s" class="visually-hidden" checked>
-                <label for="s" class="modal-cart__size">S</label>
-            </li>
-            <li class="modal-cart__item">
-                <input type="radio" name="size" value="M" id="m" class="visually-hidden">
-                <label for="m" class="modal-cart__size">M</label>
-            </li><li class="modal-cart__item">
-                <input type="radio" name="size" value="L" id="l" class="visually-hidden">
-                <label for="l" class="modal-cart__size">L</label>
-            </li>
-        </ul>
-        <button type="submit" class="modal-cart__button button">Добавить</button>
-        </form>
+            <h2 class="modal-cart__title">Добавить в корзину</h2>
+            <p class="modal-cart__text">Выберите размер:</p>
+            <form method="GET" action="https://echo.htmlacademy.ru">
+                <ul class="modal-cart__list">
+                    <li class="modal-cart__item">
+                        <input type="radio" name="size" value="S" id="s" class="visually-hidden" checked>
+                        <label for="s" class="modal-cart__size">S</label>
+                    </li>
+                    <li class="modal-cart__item">
+                        <input type="radio" name="size" value="M" id="m" class="visually-hidden">
+                        <label for="m" class="modal-cart__size">M</label>
+                    </li>
+                    <li class="modal-cart__item">
+                        <input type="radio" name="size" value="L" id="l" class="visually-hidden">
+                        <label for="l" class="modal-cart__size">L</label>
+                    </li>
+                </ul>
+                <button type="submit" class="modal-cart__button button">Добавить</button>
+            </form>
         </div>
     </section>
     <div class="modal-overlay"></div>
 
-    <script src="js/script.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
